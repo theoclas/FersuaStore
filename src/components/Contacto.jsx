@@ -1,140 +1,115 @@
-import { useState } from 'react'
 import { FACEBOOK_PAGE_URL } from '../constants/social.js'
 
+const highlights = [
+  {
+    title: 'Cadena de custodia clara',
+    text: 'Desde que recogemos tu envío hasta la entrega, cuidamos cada detalle para que llegue intacto.',
+  },
+  {
+    title: 'Cobertura en todo el país',
+    text: 'Llevamos tu pedido donde lo necesites, con la misma exigencia de calidad en cada ruta.',
+  },
+  {
+    title: 'Atención que responde',
+    text: 'Estamos en Facebook y al teléfono para resolver dudas y acompañarte en tu envío.',
+  },
+]
+
 export default function Contacto() {
-  const [sent, setSent] = useState(false)
-
-  function handleSubmit(e) {
-    e.preventDefault()
-    setSent(true)
-  }
-
   return (
     <section id="contacto" className="bg-zinc-900/80 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">Contacto</h2>
-            <p className="mt-4 text-lg text-zinc-400">
-              Escríbenos o llámanos para resolver dudas sobre coberturas, plazos o envíos especiales.
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-400">
+              Confianza que se nota
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl lg:text-[2.5rem] lg:leading-tight">
+              Envíos seguros.{' '}
+              <span className="text-blue-400">Promesas cumplidas.</span>
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-zinc-400">
+              En <strong className="font-semibold text-zinc-200">FersuaStore</strong> no solo movemos paquetes:
+              movemos la tranquilidad de saber que tu envío está en buenas manos. Apuesta por un servicio
+              pensado para quienes valoran la puntualidad, el cuidado y la comunicación honesta.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-zinc-400">
+              Descubre ofertas, novedades y tips en nuestras redes, o escríbenos cuando quieras cotizar o
+              resolver cualquier duda.
             </p>
 
-            <ul className="mt-8 space-y-6 text-zinc-300">
-              <li>
-                <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">Correo</p>
-                <a
-                  href="mailto:Fernando.pala.99@Fersuastudio.com"
-                  className="mt-1 inline-block text-lg font-medium text-blue-400 hover:text-blue-300"
-                >
-                  Fernando.pala.99@Fersuastudio.com
-                </a>
-              </li>
-              <li>
-                <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">Teléfono</p>
-                <a
-                  href="tel:+573013530292"
-                  className="mt-1 inline-block text-lg font-medium text-blue-400 hover:text-blue-300"
-                >
-                  +57 301 353 02 92
-                </a>
-              </li>
-              <li>
-                <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">Facebook</p>
-                <a
-                  href={FACEBOOK_PAGE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 inline-flex items-center gap-2 text-lg font-medium text-blue-400 hover:text-blue-300"
-                >
-                  <svg
-                    className="h-5 w-5 shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden
-                  >
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                  </svg>
-                  FersuaStore en Facebook
-                </a>
-              </li>
-              <li>
-                <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">Horario de atención</p>
-                <p className="mt-1 text-lg text-zinc-200">
-                  Lunes a viernes, 9:00 – 18:00
-                  <span className="mt-2 block text-sm text-zinc-500">Consulta fuera de horario por correo</span>
-                </p>
-              </li>
-            </ul>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={FACEBOOK_PAGE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition hover:bg-blue-500"
+              >
+                <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+                Ver FersuaStore en Facebook
+              </a>
+              <a
+                href="tel:+573013530292"
+                className="inline-flex items-center justify-center rounded-full border border-zinc-600 bg-zinc-900/50 px-6 py-3 text-sm font-semibold text-zinc-100 transition hover:border-blue-500/50 hover:bg-zinc-800"
+              >
+                Llamar ahora
+              </a>
+            </div>
           </div>
 
-          <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-lg shadow-black/30 md:p-8">
-            {sent ? (
-              <div className="flex flex-col items-center justify-center py-12 text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-400 ring-1 ring-emerald-500/30">
-                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <p className="mt-4 text-lg font-semibold text-zinc-50">Gracias por tu mensaje</p>
-                <p className="mt-2 text-zinc-400">
-                  En un entorno real, aquí se enviaría el formulario. Puedes contactarnos por correo o teléfono.
-                </p>
-                <button
-                  type="button"
-                  className="mt-6 text-sm font-medium text-blue-400 hover:text-blue-300"
-                  onClick={() => setSent(false)}
-                >
-                  Enviar otro mensaje
-                </button>
+          <div className="rounded-2xl border border-zinc-800 bg-gradient-to-b from-zinc-900/90 to-zinc-950 p-6 shadow-xl shadow-black/40 md:p-8">
+            <div className="flex items-start gap-4 rounded-xl border border-blue-500/20 bg-blue-500/5 p-4 md:p-5">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-600/20 text-blue-400">
+                <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.75}
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label htmlFor="nombre" className="block text-sm font-medium text-zinc-300">
-                    Nombre
-                  </label>
-                  <input
-                    id="nombre"
-                    name="nombre"
-                    type="text"
-                    required
-                    autoComplete="name"
-                    className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2.5 text-zinc-100 shadow-inner outline-none ring-blue-500/20 placeholder:text-zinc-500 focus:border-blue-500 focus:ring-4"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-zinc-300">
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    autoComplete="email"
-                    className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2.5 text-zinc-100 shadow-inner outline-none ring-blue-500/20 placeholder:text-zinc-500 focus:border-blue-500 focus:ring-4"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="mensaje" className="block text-sm font-medium text-zinc-300">
-                    Mensaje
-                  </label>
-                  <textarea
-                    id="mensaje"
-                    name="mensaje"
-                    rows={4}
-                    required
-                    className="mt-1 w-full resize-y rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2.5 text-zinc-100 shadow-inner outline-none ring-blue-500/20 placeholder:text-zinc-500 focus:border-blue-500 focus:ring-4"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full rounded-full bg-blue-600 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-500"
-                >
-                  Enviar consulta
-                </button>
-              </form>
-            )}
+              <div>
+                <p className="font-semibold text-zinc-50">Compromiso con envíos seguros</p>
+                <p className="mt-1 text-sm leading-relaxed text-zinc-400">
+                  Trabajamos para que cada entrega sea predecible y protegida. Tu confianza es lo que nos hace
+                  crecer.
+                </p>
+              </div>
+            </div>
+
+            <ul className="mt-8 space-y-6">
+              {highlights.map(({ title, text }) => (
+                <li key={title} className="border-b border-zinc-800/80 pb-6 last:border-0 last:pb-0">
+                  <p className="font-semibold text-zinc-100">{title}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-zinc-500">{text}</p>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 rounded-xl border border-zinc-800 bg-zinc-950/80 p-5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Contacto directo</p>
+              <ul className="mt-4 space-y-3 text-sm">
+                <li>
+                  <a
+                    href="mailto:Fernando.pala.99@Fersuastudio.com"
+                    className="font-medium text-blue-400 hover:text-blue-300"
+                  >
+                    Fernando.pala.99@Fersuastudio.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+573013530292" className="font-medium text-blue-400 hover:text-blue-300">
+                    +57 301 353 02 92
+                  </a>
+                </li>
+                <li className="text-zinc-500">
+                  Lun – Vie · 9:00 – 18:00
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
