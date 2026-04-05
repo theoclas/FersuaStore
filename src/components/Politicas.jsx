@@ -163,6 +163,8 @@ const imagePairs = [
     blockIndex: 0,
     src: '/media/politicas-2.png',
     alt: 'Políticas de cambio y atención',
+    secondarySrc: '/media/politicas-4.png',
+    secondaryAlt: 'Información complementaria — políticas FersuaStore',
     layout: 'float',
     imageOnLeft: true,
   },
@@ -176,7 +178,11 @@ const imagePairs = [
   {
     blockIndex: 2,
     src: '/media/politicas-3.png',
-    alt: 'Privacidad y envíos',
+    alt: 'Derecho de retracto — información visual',
+    secondarySrc: '/media/politicas-5.png',
+    secondaryAlt: 'Complemento visual — derecho de retracto y devoluciones',
+    /** Más aire entre las dos imágenes: baja la segunda para alinear mejor con el texto largo. */
+    secondarySpacing: 'loose',
     layout: 'float',
     imageOnLeft: true,
   },
@@ -215,7 +221,12 @@ function PolicySplitColumns({ block, src, alt }) {
  * Imagen flotante + texto: el texto usa el lateral y, al pasar la altura de la foto, también el ancho bajo la imagen.
  * Móvil: texto primero, imagen debajo (`flex-col-reverse`).
  */
-function PolicyFloatWrap({ block, src, alt, imageOnLeft }) {
+function PolicyFloatWrap({ block, src, alt, imageOnLeft, secondarySrc, secondaryAlt, secondarySpacing }) {
+  const secondaryGapClass =
+    secondarySpacing === 'loose'
+      ? 'mt-8 md:mt-16 lg:mt-24 xl:mt-28 2xl:mt-32'
+      : 'mt-3 md:mt-4'
+
   const figureShell = (
     <figure
       className={
@@ -225,6 +236,11 @@ function PolicyFloatWrap({ block, src, alt, imageOnLeft }) {
       }
     >
       <PolicyFigureInner src={src} alt={alt} />
+      {secondarySrc ? (
+        <div className={secondaryGapClass}>
+          <PolicyFigureInner src={secondarySrc} alt={secondaryAlt ?? ''} />
+        </div>
+      ) : null}
     </figure>
   )
 
@@ -251,11 +267,21 @@ function PolicyFloatWrap({ block, src, alt, imageOnLeft }) {
   )
 }
 
-function PolicyPairRow({ block, src, alt, imageOnLeft, layout }) {
+function PolicyPairRow({ block, src, alt, imageOnLeft, layout, secondarySrc, secondaryAlt, secondarySpacing }) {
   if (layout === 'split') {
     return <PolicySplitColumns block={block} src={src} alt={alt} />
   }
-  return <PolicyFloatWrap block={block} src={src} alt={alt} imageOnLeft={imageOnLeft} />
+  return (
+    <PolicyFloatWrap
+      block={block}
+      src={src}
+      alt={alt}
+      imageOnLeft={imageOnLeft}
+      secondarySrc={secondarySrc}
+      secondaryAlt={secondaryAlt}
+      secondarySpacing={secondarySpacing}
+    />
+  )
 }
 
 function PolicyBlock({
@@ -349,16 +375,30 @@ export default function Politicas() {
         <div className="mx-auto max-w-6xl">
           <div className="rounded-3xl border border-zinc-800/80 bg-zinc-900/20 p-5 shadow-xl shadow-black/20 ring-1 ring-white/[0.06] sm:p-7 md:p-8 lg:p-10">
             <div className="space-y-12 border-b border-zinc-800/60 pb-12 md:space-y-14 md:pb-14 lg:space-y-16 lg:pb-16">
-              {imagePairs.map(({ blockIndex, src, alt, imageOnLeft, layout }) => (
-                <PolicyPairRow
-                  key={blockIndex}
-                  block={blocks[blockIndex]}
-                  src={src}
-                  alt={alt}
-                  imageOnLeft={imageOnLeft}
-                  layout={layout}
-                />
-              ))}
+              {imagePairs.map(
+                ({
+                  blockIndex,
+                  src,
+                  alt,
+                  imageOnLeft,
+                  layout,
+                  secondarySrc,
+                  secondaryAlt,
+                  secondarySpacing,
+                }) => (
+                  <PolicyPairRow
+                    key={blockIndex}
+                    block={blocks[blockIndex]}
+                    src={src}
+                    alt={alt}
+                    imageOnLeft={imageOnLeft}
+                    layout={layout}
+                    secondarySrc={secondarySrc}
+                    secondaryAlt={secondaryAlt}
+                    secondarySpacing={secondarySpacing}
+                  />
+                ),
+              )}
             </div>
 
             <div className="divide-y divide-zinc-800/70 pt-10 md:pt-12">
