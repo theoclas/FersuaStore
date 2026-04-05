@@ -6,7 +6,7 @@ export default function SobreNosotros() {
           <div className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 shadow-lg shadow-black/25">
             <img
               src="/media/paquetes.png"
-              alt="Operaciones logísticas FersuaStore"
+              alt="FersuaStore — envíos y productos para el hogar"
               className="h-full w-full object-cover"
               loading="lazy"
             />
@@ -14,9 +14,14 @@ export default function SobreNosotros() {
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">Sobre FersuaStore</h2>
             <p className="mt-4 text-lg text-zinc-400">
-              Somos un equipo enfocado en la logística de última milla y en envíos que requieren cuidado
-              extra. Combinamos procesos claros, tecnología y personas para que cada entrega refleje
-              profesionalismo.
+              Somos una tienda que piensa en tu tranquilidad: ofrecemos productos seleccionados para el hogar, el
+              bienestar y el estilo de vida, con la opción de{' '}
+              <strong className="font-semibold text-zinc-200">pago contra entrega</strong> para que solo pagues
+              cuando compruebes tu pedido.
+            </p>
+            <p className="mt-4 text-lg text-zinc-400">
+              Cuidamos cada envío como si fuera nuestro: embalaje adecuado, rutas nacionales y atención cercana
+              cuando nos necesitas.
             </p>
             <ul className="mt-8 space-y-4 text-zinc-300">
               <li className="flex gap-3">
@@ -30,8 +35,8 @@ export default function SobreNosotros() {
                   </svg>
                 </span>
                 <span>
-                  <strong className="text-zinc-100">Experiencia consolidada</strong> en gestión de paquetes
-                  frágiles y de alto valor.
+                  <strong className="text-zinc-100">Variedad real</strong> para cada rincón: organización,
+                  decoración, confort y hábitos saludables.
                 </span>
               </li>
               <li className="flex gap-3">
@@ -45,8 +50,8 @@ export default function SobreNosotros() {
                   </svg>
                 </span>
                 <span>
-                  <strong className="text-zinc-100">Cobertura amplia</strong> en el territorio nacional con rutas
-                  optimizadas y puntos de reparto coordinados.
+                  <strong className="text-zinc-100">Cobertura en todo el país</strong> con el mismo compromiso de
+                  seguridad en cada entrega.
                 </span>
               </li>
               <li className="flex gap-3">
@@ -60,8 +65,8 @@ export default function SobreNosotros() {
                   </svg>
                 </span>
                 <span>
-                  <strong className="text-zinc-100">Compromiso con la seguridad</strong> en embalaje,
-                  manipulación y entrega.
+                  <strong className="text-zinc-100">Transparencia</strong> en el proceso: sabes qué esperar y
+                  cuándo recibir tu pedido.
                 </span>
               </li>
             </ul>

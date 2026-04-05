@@ -2,16 +2,16 @@ import { FACEBOOK_PAGE_URL } from '../constants/social.js'
 
 const highlights = [
   {
-    title: 'Cadena de custodia clara',
-    text: 'Desde que recogemos tu envío hasta la entrega, cuidamos cada detalle para que llegue intacto.',
+    title: 'Pago contra entrega',
+    text: 'Pagas cuando el repartidor te entrega el paquete: ideal para comprar con confianza y sin riesgos en línea.',
   },
   {
-    title: 'Cobertura en todo el país',
-    text: 'Llevamos tu pedido donde lo necesites, con la misma exigencia de calidad en cada ruta.',
+    title: 'Envíos pensados para tu tranquilidad',
+    text: 'Tratamos cada paquete con cuidado para que lo que elegiste para tu hogar o tu bienestar llegue en buen estado.',
   },
   {
-    title: 'Atención que responde',
-    text: 'Estamos en Facebook y al teléfono para resolver dudas y acompañarte en tu envío.',
+    title: 'Catálogo para tu día a día',
+    text: 'Desde detalles de decoración hasta artículos de confort y hábitos saludables: variedad para armar el hogar que quieres.',
   },
 ]
 
@@ -22,20 +22,20 @@ export default function Contacto() {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-blue-400">
-              Confianza que se nota
+              Seguridad y bienestar en cada compra
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl lg:text-[2.5rem] lg:leading-tight">
-              Envíos seguros.{' '}
-              <span className="text-blue-400">Promesas cumplidas.</span>
+              Hogar, estilo de vida y{' '}
+              <span className="text-blue-400">pago contra entrega</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-zinc-400">
-              En <strong className="font-semibold text-zinc-200">FersuaStore</strong> no solo movemos paquetes:
-              movemos la tranquilidad de saber que tu envío está en buenas manos. Apuesta por un servicio
-              pensado para quienes valoran la puntualidad, el cuidado y la comunicación honesta.
+              En <strong className="font-semibold text-zinc-200">FersuaStore</strong> reunimos productos que
+              mejoran tu espacio y tu rutina, con la tranquilidad de pagar solo cuando recibes tu pedido y
+              comprobar que todo está en orden.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-zinc-400">
-              Descubre ofertas, novedades y tips en nuestras redes, o escríbenos cuando quieras cotizar o
-              resolver cualquier duda.
+              Visítanos en Facebook para ver el catálogo, novedades y promociones; contáctanos por teléfono o
+              correo si necesitas ayuda antes de comprar.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -48,13 +48,13 @@ export default function Contacto() {
                 <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
-                Ver FersuaStore en Facebook
+                Ir a la tienda
               </a>
               <a
                 href="tel:+573013530292"
                 className="inline-flex items-center justify-center rounded-full border border-zinc-600 bg-zinc-900/50 px-6 py-3 text-sm font-semibold text-zinc-100 transition hover:border-blue-500/50 hover:bg-zinc-800"
               >
-                Llamar ahora
+                Llamar
               </a>
             </div>
           </div>
@@ -67,15 +67,15 @@ export default function Contacto() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={1.75}
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
                   />
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-zinc-50">Compromiso con envíos seguros</p>
+                <p className="font-semibold text-zinc-50">Paquetes seguros, compras tranquilas</p>
                 <p className="mt-1 text-sm leading-relaxed text-zinc-400">
-                  Trabajamos para que cada entrega sea predecible y protegida. Tu confianza es lo que nos hace
-                  crecer.
+                  Priorizamos el cuidado del embalaje y la entrega para que disfrutes lo que compraste sin
+                  sorpresas desagradables.
                 </p>
               </div>
             </div>
@@ -104,9 +104,6 @@ export default function Contacto() {
                   <a href="tel:+573013530292" className="font-medium text-blue-400 hover:text-blue-300">
                     +57 301 353 02 92
                   </a>
-                </li>
-                <li className="text-zinc-500">
-                  Lun – Vie · 9:00 – 18:00
                 </li>
               </ul>
             </div>

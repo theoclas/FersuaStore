@@ -1,42 +1,42 @@
 const benefits = [
   {
-    title: 'Puntualidad',
-    text: 'Ventanas de entrega acordadas y comunicación proactiva si hay cambios.',
+    title: 'Pago contra entrega',
+    text: 'Recibes, revisas y pagas en el momento de la entrega. Compras con la tranquilidad de ver el producto antes de desembolsar.',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.75}
-          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+          d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3 3.75h10.5m0-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25H16.5m-13.5-9V4.875A1.875 1.875 0 015.25 3h4.5c.621 0 1.125.504 1.125 1.125v4.125M8.25 9h.008v.008H8.25V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm3.75 0h.008v.008H12.375V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
         />
       </svg>
     ),
   },
   {
-    title: 'Seguridad en los paquetes',
-    text: 'Buenas prácticas de embalaje y cadena de custodia para reducir riesgos en tránsito.',
+    title: 'Paquetes protegidos',
+    text: 'Embalaje y manejo pensados para que tus compras lleguen bien cuidadas, desde el almacén hasta tu puerta.',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.75}
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+          d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
         />
       </svg>
     ),
   },
   {
-    title: 'Atención al cliente',
-    text: 'Canales claros para consultas, reclamaciones y seguimiento humano cuando lo necesitas.',
+    title: 'Hogar y estilo de vida',
+    text: 'Artículos que suman comodidad, orden y bienestar: para que tu espacio se sienta más tuyo cada día.',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.75}
-          d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
         />
       </svg>
     ),
@@ -50,7 +50,7 @@ export default function Beneficios() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">Beneficios</h2>
           <p className="mt-4 text-lg text-zinc-400">
-            Lo que nos importa es que confíes en cada envío, desde el primer kilómetro hasta la puerta final.
+            Seguridad al pagar, cuidado en el envío y una selección pensada para tu hogar y tu día a día.
           </p>
         </div>
 
