@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #09090b;
+  color: #fafafa;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #09090b;
+}
