@@ -32,10 +32,10 @@ export default function Contacto() {
               <li>
                 <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">Teléfono</p>
                 <a
-                  href="tel:+34900123456"
+                  href="tel:+573013530292"
                   className="mt-1 inline-block text-lg font-medium text-blue-400 hover:text-blue-300"
                 >
-                  +34 900 123 456
+                  +57 301 353 02 92
                 </a>
               </li>
               <li>
