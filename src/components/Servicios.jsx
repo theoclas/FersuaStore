@@ -2,14 +2,14 @@ const items = [
   {
     title: 'Pago contra entrega',
     desc: 'Mayor seguridad: pagas cuando el paquete está en tus manos. Ideal para comprar con confianza y sin adelantar dinero en línea.',
-    image: '/media/recibiendo.png',
-    alt: 'Cliente recibiendo un pedido con seguridad',
+    image: '/media/pago-contra-entrega.png',
+    alt: 'Pago contra entrega al recibir tu pedido',
   },
   {
     title: 'Envíos seguros de paquetes',
     desc: 'Embalaje cuidadoso, manipulación responsable y entrega con seguimiento para que lo que pediste llegue en las mejores condiciones.',
-    image: '/media/paquetes.png',
-    alt: 'Paquetes preparados y protegidos para el envío',
+    image: '/media/entregas-2.png',
+    alt: 'Entregas seguras a domicilio',
   },
   {
     title: 'Hogar, bienestar y estilo de vida',

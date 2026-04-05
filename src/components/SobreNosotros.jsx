@@ -6,7 +6,7 @@ export default function SobreNosotros() {
           <div className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 shadow-lg shadow-black/25">
             <img
               src="/media/paquetes.png"
-              alt="FersuaStore — envíos y productos para el hogar"
+              alt="Paquetes FersuaStore preparados con cuidado para el envío"
               className="h-full w-full object-cover"
               loading="lazy"
             />

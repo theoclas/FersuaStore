@@ -15,9 +15,9 @@ export default function App() {
         <Hero />
         <Servicios />
         <SobreNosotros />
+        <Politicas />
         <Beneficios />
         <Contacto />
-        <Politicas />
       </main>
       <Footer />
     </>
