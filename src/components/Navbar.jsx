@@ -8,6 +8,7 @@ const navLinks = [
   { href: '#nosotros', label: 'Nosotros' },
   { href: '#beneficios', label: 'Beneficios' },
   { href: '#contacto', label: 'Contacto' },
+  { href: '#politicas', label: 'Políticas' },
 ]
 
 export default function Navbar() {

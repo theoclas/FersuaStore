@@ -4,6 +4,7 @@ import Servicios from './components/Servicios.jsx'
 import SobreNosotros from './components/SobreNosotros.jsx'
 import Beneficios from './components/Beneficios.jsx'
 import Contacto from './components/Contacto.jsx'
+import Politicas from './components/Politicas.jsx'
 import Footer from './components/Footer.jsx'
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <SobreNosotros />
         <Beneficios />
         <Contacto />
+        <Politicas />
       </main>
       <Footer />
     </>

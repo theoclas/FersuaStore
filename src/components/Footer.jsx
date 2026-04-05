@@ -28,9 +28,12 @@ export default function Footer() {
             </svg>
             Tienda online
           </a>
-          <p className="text-center text-sm md:text-right">
-            © {year} FersuaStore. Todos los derechos reservados.
-          </p>
+          <div className="flex flex-col items-center gap-2 text-center text-sm md:items-end md:text-right">
+            <a href="#politicas" className="text-zinc-500 transition hover:text-zinc-300">
+              Políticas
+            </a>
+            <p>© {year} FersuaStore. Todos los derechos reservados.</p>
+          </div>
         </div>
       </div>
     </footer>
