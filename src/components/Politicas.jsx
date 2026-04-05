@@ -153,51 +153,109 @@ const blocks = [
   },
 ]
 
-/** Primeras tres secciones: pareadas con imagen en layout zig-zag (imagen izq. / der. alternado). */
+/**
+ * Primeras tres secciones con imagen:
+ * - `float`: texto rodea la imagen (aprovecha el hueco bajo la foto; imagen a la izquierda).
+ * - `split`: dos columnas fijas texto | imagen (como el layout anterior), sin flotación.
+ */
 const imagePairs = [
-  { blockIndex: 0, src: '/media/politicas-2.png', alt: 'Políticas de cambio y atención', imageOnLeft: true },
-  { blockIndex: 1, src: '/media/politicas-1.png', alt: 'Políticas y compromiso CYP Shop', imageOnLeft: false },
-  { blockIndex: 2, src: '/media/politicas-3.png', alt: 'Privacidad y envíos', imageOnLeft: true },
+  {
+    blockIndex: 0,
+    src: '/media/politicas-2.png',
+    alt: 'Políticas de cambio y atención',
+    layout: 'float',
+    imageOnLeft: true,
+  },
+  {
+    blockIndex: 1,
+    src: '/media/politicas-1.png',
+    alt: 'Políticas y compromiso CYP Shop',
+    layout: 'split',
+    imageOnLeft: false,
+  },
+  {
+    blockIndex: 2,
+    src: '/media/politicas-3.png',
+    alt: 'Privacidad y envíos',
+    layout: 'float',
+    imageOnLeft: true,
+  },
 ]
 
-function PolicyVisual({ src, alt }) {
+function PolicyFigureInner({ src, alt }) {
   return (
-    <figure className="h-full min-h-0">
-      <div className="overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-900/50 shadow-2xl shadow-black/40 ring-1 ring-white/[0.06]">
-        <img
-          src={src}
-          alt={alt}
-          className="aspect-[4/3] w-full object-cover object-center sm:aspect-[5/4] lg:min-h-[17.5rem] lg:aspect-auto lg:max-h-[26rem]"
-          loading="lazy"
-        />
-      </div>
-    </figure>
+    <div className="overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-900/50 shadow-xl shadow-black/25 ring-1 ring-white/[0.06]">
+      <img
+        src={src}
+        alt={alt}
+        className="aspect-[4/3] w-full object-cover object-center md:aspect-[5/4]"
+        loading="lazy"
+      />
+    </div>
   )
 }
 
-function PolicySplitRow({ block, src, alt, imageOnLeft }) {
-  const visual = <PolicyVisual src={src} alt={alt} />
+/** Dos columnas alineadas arriba: texto a la izquierda, imagen a la derecha (sin huecos raros a la izquierda de la foto). */
+function PolicySplitColumns({ block, src, alt }) {
+  return (
+    <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-10 xl:gap-12">
+      <div className="order-1 min-w-0 flex-1">
+        <div className="min-w-0 [overflow-wrap:anywhere]">
+          <PolicyBlock {...block} />
+        </div>
+      </div>
+      <figure className="order-2 w-full shrink-0 lg:max-w-[46%] lg:basis-[46%] xl:max-w-[45%]">
+        <PolicyFigureInner src={src} alt={alt} />
+      </figure>
+    </div>
+  )
+}
+
+/**
+ * Imagen flotante + texto: el texto usa el lateral y, al pasar la altura de la foto, también el ancho bajo la imagen.
+ * Móvil: texto primero, imagen debajo (`flex-col-reverse`).
+ */
+function PolicyFloatWrap({ block, src, alt, imageOnLeft }) {
+  const figureShell = (
+    <figure
+      className={
+        imageOnLeft
+          ? 'mt-6 w-full max-w-full md:float-left md:mb-4 md:mt-0 md:mr-8 md:w-[min(100%,42%)] lg:mr-10 lg:w-[40%]'
+          : 'mt-6 w-full max-w-full md:float-right md:mb-4 md:ml-8 md:mt-0 md:w-[min(100%,42%)] lg:ml-10 lg:w-[40%]'
+      }
+    >
+      <PolicyFigureInner src={src} alt={alt} />
+    </figure>
+  )
+
   const copy = (
-    <div className="flex min-w-0 flex-col justify-center lg:py-2">
+    <div className="min-w-0 [overflow-wrap:anywhere]">
       <PolicyBlock {...block} />
     </div>
   )
 
   return (
-    <div className="flex flex-col gap-8 lg:flex-row lg:items-stretch lg:gap-10 xl:gap-12">
+    <div className="flex min-w-0 flex-col-reverse md:block after:block after:clear-both after:content-['']">
       {imageOnLeft ? (
         <>
-          <div className="order-2 w-full shrink-0 lg:order-1 lg:w-[46%] xl:w-[45%]">{visual}</div>
-          <div className="order-1 min-w-0 flex-1 lg:order-2">{copy}</div>
+          {figureShell}
+          {copy}
         </>
       ) : (
         <>
-          <div className="order-1 min-w-0 flex-1">{copy}</div>
-          <div className="order-2 w-full shrink-0 lg:w-[46%] xl:w-[45%]">{visual}</div>
+          {copy}
+          {figureShell}
         </>
       )}
     </div>
   )
+}
+
+function PolicyPairRow({ block, src, alt, imageOnLeft, layout }) {
+  if (layout === 'split') {
+    return <PolicySplitColumns block={block} src={src} alt={alt} />
+  }
+  return <PolicyFloatWrap block={block} src={src} alt={alt} imageOnLeft={imageOnLeft} />
 }
 
 function PolicyBlock({
@@ -291,13 +349,14 @@ export default function Politicas() {
         <div className="mx-auto max-w-6xl">
           <div className="rounded-3xl border border-zinc-800/80 bg-zinc-900/20 p-5 shadow-xl shadow-black/20 ring-1 ring-white/[0.06] sm:p-7 md:p-8 lg:p-10">
             <div className="space-y-12 border-b border-zinc-800/60 pb-12 md:space-y-14 md:pb-14 lg:space-y-16 lg:pb-16">
-              {imagePairs.map(({ blockIndex, src, alt, imageOnLeft }) => (
-                <PolicySplitRow
+              {imagePairs.map(({ blockIndex, src, alt, imageOnLeft, layout }) => (
+                <PolicyPairRow
                   key={blockIndex}
                   block={blocks[blockIndex]}
                   src={src}
                   alt={alt}
                   imageOnLeft={imageOnLeft}
+                  layout={layout}
                 />
               ))}
             </div>
