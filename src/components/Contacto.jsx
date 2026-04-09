@@ -110,7 +110,7 @@ export default function Contacto() {
                   <a className="font-medium text-blue-400 hover:text-blue-300">
                   
                    
-                  CR 49 B # 86 - 47 SEGUNDO PISO
+                  CR 49 B # 86 - 47 CA SEGUNDO PISO
                   <br />
                   MEDELLIN, COLOMBIA
                   <br />
