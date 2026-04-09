@@ -92,6 +92,7 @@ export default function Contacto() {
             <div className="mt-8 rounded-xl border border-zinc-800 bg-zinc-950/80 p-5">
               <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Contacto directo</p>
               <ul className="mt-4 space-y-3 text-sm">
+                
                 <li>
                   <a
                     href="mailto:Fernando.pala.99@Fersuastudio.com"
@@ -103,6 +104,18 @@ export default function Contacto() {
                 <li>
                   <a href="tel:+573013530292" className="font-medium text-blue-400 hover:text-blue-300">
                     +57 301 353 02 92
+                  </a>
+                </li>
+                <li>
+                  <a className="font-medium text-blue-400 hover:text-blue-300">
+                  
+                   
+                  CR 49 B # 86 - 47 SEGUNDO PISO
+                  <br />
+                  MEDELLIN, COLOMBIA
+                  <br />
+                  Código postal: 050001
+                  
                   </a>
                 </li>
               </ul>
