@@ -114,7 +114,7 @@ export default function Contacto() {
                   <br />
                   MEDELLIN, COLOMBIA
                   <br />
-                  Código postal: 050001
+                  Código postal: 050004
                   
                   </a>
                 </li>
