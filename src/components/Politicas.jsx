@@ -19,7 +19,7 @@ const blocks = [
     ],
     fieldList: cambioDevolucionFields,
     paragraphs: [
-      'Te contestaremos indicando el procedimiento correspondiente y si la solicitud es autorizada de acuerdo a las políticas, términos y condiciones de CYP Shop',
+      'Te contestaremos indicando el procedimiento correspondiente y si la solicitud es autorizada de acuerdo a las políticas, términos y condiciones de FersuaStore',
       'Los costos de transporte y los demás que conlleve el cambio serán cubiertos por el cliente.',
       'Es importante que tengas en cuenta que: el producto que vas a cambiar no debe estar usado, modificado o alterado de su estado original, debe estar en buen estado, limpio y con sus etiquetas originales.',
       'Los cambios pueden tardar hasta 10 días hábiles.',
@@ -75,7 +75,7 @@ const blocks = [
       'En los contratos de adquisición de bienes de uso personal',
     ],
     paragraphsAfterList: [
-      'El proveedor deberá devolverle en dinero al consumidor todas las sumas pagadas sin que proceda a hacer descuentos o retenciones por concepto alguno. CYP SHOP devolverá al cliente la suma pagada en un plazo máximo de treinta (30) días calendario desde el momento en que ejerció el derecho.',
+      'El proveedor deberá devolverle en dinero al consumidor todas las sumas pagadas sin que proceda a hacer descuentos o retenciones por concepto alguno. FersuaStore devolverá al cliente la suma pagada en un plazo máximo de treinta (30) días calendario desde el momento en que ejerció el derecho.',
     ],
     subsections: [
       {
@@ -83,10 +83,10 @@ const blocks = [
         paragraphs: [
           `El cliente ejercerá el derecho de retracto enviando un correo electrónico a ${SUPPORT_EMAIL} con el asunto: retracto, enviando los datos de compra y de contacto, haciendo la solicitud formal de la devolución, dando fe de que el producto está en las mismas condiciones en las que fue recibido, a lo que se le responderá con la aprobación y las indicaciones a proseguir.`,
           'La solicitud deberá ser presentada por el titular de la compra dentro los 5 primeros días hábiles, contados a partir de la entrega del bien.',
-          'El cliente deberá devolver inmediatamente con la notificación del ejercicio del derecho de retracto, el producto en las mismas condiciones que lo recibió, nuevo, sin daños o deterioro, con todas las etiquetas y empaques originales. Si el producto no se encuentra empacado en su empaque original, no se generará la recepción en CYP SHOP ni se aceptará.',
+          'El cliente deberá devolver inmediatamente con la notificación del ejercicio del derecho de retracto, el producto en las mismas condiciones que lo recibió, nuevo, sin daños o deterioro, con todas las etiquetas y empaques originales. Si el producto no se encuentra empacado en su empaque original, no se generará la recepción en FersuaStore ni se aceptará.',
           'Los costos de transporte y los demás que conlleve la devolución del bien serán cubiertos por el cliente. Sí el producto a devolver fue pagado con tarjeta crédito se realizará el reembolso del dinero por medio de Payu solicitando la reversión del valor total o parcial.',
           'Si el producto fue cancelado con tarjeta débito, baloto o efecty se reembolsará la totalidad del dinero efectivamente pagado a la cuenta de ahorros que nos informe mediante transferencia bancaria.',
-          'La devolución del dinero se realizará dentro de los treinta (30) días calendario siguientes a la fecha en que CYP SHOP reciba los productos devueltos en su bodega y que informe que los mismos se encuentran en las mismas condiciones en las que se entregaron al Cliente, que el derecho de retracto se ejerció en el término indicado en los presentes Términos y Condiciones y en la ley para ello y que en consecuencia acepte el retracto.',
+          'La devolución del dinero se realizará dentro de los treinta (30) días calendario siguientes a la fecha en que FersuaStore reciba los productos devueltos en su bodega y que informe que los mismos se encuentran en las mismas condiciones en las que se entregaron al Cliente, que el derecho de retracto se ejerció en el término indicado en los presentes Términos y Condiciones y en la ley para ello y que en consecuencia acepte el retracto.',
           'No aplica para artículos vendidos en el exterior.',
         ],
       },
@@ -105,7 +105,7 @@ const blocks = [
   {
     title: 'Política de privacidad',
     paragraphs: [
-      'La presente Política de Privacidad establece los términos en que CYP Shop, usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que solo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.',
+      'La presente Política de Privacidad establece los términos en que FersuaStore, usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que solo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.',
     ],
     subsections: [
       {
@@ -118,7 +118,7 @@ const blocks = [
         heading: 'USO DE LA INFORMACIÓN RECOGIDA:',
         paragraphs: [
           'Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso de que aplique, y mejorar nuestros productos y servicios. Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.',
-          'CYP Shop está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.',
+          'FersuaStore está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.',
         ],
       },
     ],
@@ -171,7 +171,7 @@ const imagePairs = [
   {
     blockIndex: 1,
     src: '/media/politicas-1.png',
-    alt: 'Políticas y compromiso CYP Shop',
+    alt: 'Políticas y compromiso FersuaStore',
     layout: 'split',
     imageOnLeft: false,
   },
