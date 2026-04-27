@@ -41,7 +41,7 @@ const blocks = [
     title: 'Error en la entrega del producto',
     paragraphs: [
       `Si el producto entregado no es el correcto, tendrás (5) días calendario a partir del momento de la entrega para informar acerca del error y solicitar el cambio, enviando un correo electrónico a ${SUPPORT_EMAIL} , de lunes a viernes de 8:00am a 12:30 pm y de 2:00pm a 5:30 pm.`,
-      'Recibido el correo se procederá al análisis del caso, se confirmará si fue o no un error de LitDaily Shop quien, de ser así, asumirá el valor de recogida del producto y él envió del nuevo producto.',
+      'Recibido el correo se procederá al análisis del caso, se confirmará si fue o no un error de FersuaStore quien, de ser así, asumirá el valor de recogida del producto y él envió del nuevo producto.',
     ],
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
